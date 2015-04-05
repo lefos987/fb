@@ -16,12 +16,12 @@ html, body {
         height: 70 * $unit;
 
         &.small {
-            min-width: 5 * $unit;
+            min-width: 8 * $unit;
+            padding-right: 0;
         }
 
         &.large {
             min-width: 60 * $unit;
-            background: $bg;
         }
 
         &.no-padding {

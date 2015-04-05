@@ -4,20 +4,25 @@
 
 .times {
 
-    margin: 0;
+    position: relative;
+    margin: -20px 0 0 0;
     padding: 0;
     list-style: none;
 
     .time-interval {
 
+        position: absolute;
+        left: 10px;
+        right: 10px;
+
         .time {
 
-            font-size: 1.2 * $unit;
+            font-size: $unit;
             text-align: right;
 
             &.full-hour {
 
-                font-size: 1.6 * $unit;
+                font-size: 1.4 * $unit;
                 font-weight: bold;
             }
         }
@@ -25,25 +30,56 @@
         .ampm {
 
             margin-left: 0.5 * $unit;
-            font-size: 1.2 * $unit;
+            font-size: $unit;
             font-weight: normal;
         }
     }
 }
 
-.events {
 
-    display: flex;
+
+.events {
     height: 100%;
-    padding: $unit;
     background: $bg;
-    
+    position: relative;
+
+
     .event {
-        height: 100px;
-        width: 100%;
+        position: absolute;
         background: $secondary-bg;
         border-left: 0.5 * $unit solid $primary-color;
-        margin-top: 30px;
+
+        &.one {
+            background: pink;
+            top: 30px;
+            left: 10px;
+            right: 10px;
+            bottom: (720px - 150px);
+        }
+
+        &.two {
+            background: blue;
+            top: 540px;
+            left: 10px;
+            right: 310px;
+            bottom: (720px - 600px);
+        }
+
+        &.three {
+            background: yellow;
+            top: 560px;
+            left: 310px;
+            right: 10px;
+            bottom: (720px - 620px);
+        }
+
+        &.four {
+            background: red;
+            top: 610px;
+            left: 10px;
+            right: 310px;
+            bottom: (720px - 670px);
+        }
     }
-    
+
 }
