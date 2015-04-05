@@ -1,23 +1,23 @@
-var CalendarDay = (function (Time) {
+(function (Calendar) {
 
     'use strict';
 
-    function CalendarDay (params) {
+    Calendar.Day = function (params) {
 
         params = params || {};
         this.startHour = params.startHour || null;
         this.endHour = params.endHour || null;
         this.hourIntervals = params.hourIntervals || null;
-    }
+    };
 
-    CalendarDay.prototype.getTimes = function () {
+    Calendar.Day.prototype.getTimes = function () {
         var times = [],
             dayDuration = (this.endHour - this.startHour) * 60,
             start = this.startHour,
             step = 60 / this.hourIntervals;
 
         for (var i=0; i<= dayDuration; i+= step) {
-            var time = new Time();
+            var time = new Calendar.Time();
             if (i % 60 === 0) {
                 start = (i === 0) ? start : (start + 1);
                 time.parseHourMinutes(start * 100);
@@ -33,10 +33,10 @@ var CalendarDay = (function (Time) {
 
     };
 
-    CalendarDay.prototype.getDuration = function () {
+    Calendar.Day.prototype.getDuration = function () {
         return (this.endHour - this.startHour) * 60;
     };
 
-    return CalendarDay;
+    return Calendar;
 
-})(CalendarTime);
+})(Calendar || {});

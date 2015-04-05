@@ -1,8 +1,8 @@
-var CalendarEvent = (function () {
+(function (Calendar) {
 
     'use strict';
 
-    function Event (params) {
+    Calendar.Event = function (params) {
 
         params = params || {};
 
@@ -10,7 +10,8 @@ var CalendarEvent = (function () {
         this.endTime = params.endTime || null;
         this.title = params.title || 'Sample Item';
         this.location = params.location || 'Sample Location';
-    }
+    };
 
-    return Event;
-})();
+    return Calendar;
+
+})(Calendar || {});

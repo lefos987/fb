@@ -1,17 +1,22 @@
-var CalendarTime = (function () {
+(function (Calendar) {
 
     'use strict';
 
-    function CalendarTime (params) {
+    Calendar.Time = function (params) {
 
         params = params || {};
         this.hours = params.hours || null;
         this.minutes = params.minutes || null;
         this.ampm = params.ampm || null;
         this.isFullHour = params.isFullHour || null;
-    }
+    };
 
-    CalendarTime.prototype.parseHourMinutes = function (data) {
+    Calendar.Time.prototype.format = function () {
+        var hour = (this.hours > 12) ? this.hours % 12 : this.hours;
+        return hour + ':' + this.minutes;
+    };
+
+    Calendar.Time.prototype.parseHourMinutes = function (data) {
 
         var time = data.toString(),
             index = time.length - 2;
@@ -21,5 +26,6 @@ var CalendarTime = (function () {
         this.ampm = (this.hours >= 12) ? 'PM' : 'AM';
     };
 
-    return CalendarTime;
-})();
+    return Calendar;
+
+})(Calendar || {});
