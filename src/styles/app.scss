@@ -1,0 +1,49 @@
+@import "variables";
+@import 'grid';
+@import "typography";
+
+.times {
+
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .time-interval {
+
+        .time {
+
+            font-size: 1.2 * $unit;
+            text-align: right;
+
+            &.full-hour {
+
+                font-size: 1.6 * $unit;
+                font-weight: bold;
+            }
+        }
+
+        .ampm {
+
+            margin-left: 0.5 * $unit;
+            font-size: 1.2 * $unit;
+            font-weight: normal;
+        }
+    }
+}
+
+.events {
+
+    display: flex;
+    height: 100%;
+    padding: $unit;
+    background: $bg;
+    
+    .event {
+        height: 100px;
+        width: 100%;
+        background: $secondary-bg;
+        border-left: 0.5 * $unit solid $primary-color;
+        margin-top: 30px;
+    }
+    
+}

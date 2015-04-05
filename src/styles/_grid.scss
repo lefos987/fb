@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+}
+
+.main-content {
+    padding: 25px;
+}
+
+.container {
+
+    display: flex;
+
+    .column {
+
+        padding: $unit;
+        height: 70 * $unit;
+
+        &.small {
+            min-width: 5 * $unit;
+        }
+
+        &.large {
+            min-width: 60 * $unit;
+            background: $bg;
+        }
+
+        &.no-padding {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        
+    }
+}
