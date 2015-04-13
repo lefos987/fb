@@ -28,10 +28,6 @@ var Calendar = (function () {
         });
     }
 
-    function _resetEvents (eventsContainer) {
-        eventsContainer.innerHTML = '';
-    }
-
     /**
      * Method to draw the event elements after resolving any collisions
      * @param events {array} - an array of Event objects
@@ -44,7 +40,7 @@ var Calendar = (function () {
             pl = parseInt(computedStyle.getPropertyValue('padding-left'), 10),
             pr = parseInt(computedStyle.getPropertyValue('padding-right'), 10);
 
-        _resetEvents(parent);
+        parent.innerHTML = '';
 
         var finalEvents = Calendar.CollisionResolver.resolveCollisions(events, w);
 
@@ -61,9 +57,13 @@ var Calendar = (function () {
      * @param hourInterval {int} - the number of intervals per hour
      */
     function drawTimeList (times, parentId, hourInterval) {
+
         var parent = document.getElementById(parentId);
-        times.forEach(function (time, index) {
-            var timeElement = Calendar.UIElements.createTimeElement(time, index, hourInterval);
+
+        parent.innerHTML = '';
+
+        times.forEach(function (time) {
+            var timeElement = Calendar.UIElements.createTimeElement(time, hourInterval);
             parent.appendChild(timeElement);
         });
     }

@@ -8,25 +8,23 @@ html, body {
 
 .container {
 
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 
     .column {
 
-        padding: $unit;
-        height: 70 * $unit;
+        padding: 0 $unit;
+        height: 72 * $unit;
 
         &.small {
             min-width: 8 * $unit;
-            padding-right: 0;
         }
 
         &.large {
             min-width: 60 * $unit;
-        }
-
-        &.no-padding {
-            padding-top: 0;
-            padding-bottom: 0;
         }
         
     }

@@ -7,8 +7,7 @@
         gUtil = require('gulp-util'),
         jshint = require('gulp-jshint'),
         jshintStylish = require('jshint-stylish'),
-        scss = require('gulp-sass'),
-        sourcemaps = require('gulp-sourcemaps');
+        scss = require('gulp-sass');
 
     var files = require('./config/gulpConfig').files,
         directories = require('./config/gulpConfig').directories;
@@ -142,5 +141,13 @@
     define('develop', 'use it when developing', true);
     /*************************************************************/
     gulp.task('develop', ['clean', 'index', 'scss', 'js', 'watch']);
+
+
+    /*************************************************************/
+    define('release', 'use it to build the final dist folder', true);
+    /*************************************************************/
+    gulp.task('release', ['clean', 'index', 'scss', 'js']);
+
+
 
 })();

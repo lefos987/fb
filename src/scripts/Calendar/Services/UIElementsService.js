@@ -45,11 +45,10 @@
     /**
      * Method to create the DOM element for a specific time
      * @param time {obj} - the Time object that we want to create
-     * @param index {int} - the index of this Time object in the times list
      * @param hourInterval {int} - the number of intervals per hour
      * @returns {Element}
      */
-    function createTimeElement (time, index, hourInterval) {
+    function createTimeElement (time, hourInterval) {
 
         var intervalDuration = 60 / hourInterval,
             timeContainer = document.createElement('li'),
@@ -57,7 +56,7 @@
             ampm = document.createElement('span');
 
         timeContainer.classList.add('time-interval');
-        timeContainer.style.top = (index * intervalDuration) + 'px';
+        timeContainer.style.height = intervalDuration + 'px';
 
         timeValue.classList.add('time');
         timeValue.innerHTML = time.format();
