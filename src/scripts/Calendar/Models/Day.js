@@ -10,6 +10,10 @@
         this.hourIntervals = params.hourIntervals || null;
     };
 
+    /**
+     * Method to generate the list of Time objects for this Day
+     * @returns {Array}
+     */
     Calendar.Day.prototype.getTimes = function () {
         var times = [],
             dayDuration = (this.endHour - this.startHour) * 60,
@@ -31,10 +35,6 @@
         }
         return times;
 
-    };
-
-    Calendar.Day.prototype.getDuration = function () {
-        return (this.endHour - this.startHour) * 60;
     };
 
     return Calendar;

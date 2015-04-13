@@ -6,8 +6,10 @@
 
         params = params || {};
 
-        this.startTime = params.startTime || null;
-        this.endTime = params.endTime || null;
+        this.startTime = params.startTime || 0;
+        this.endTime = params.endTime || 0;
+        this.startPosition = params.startPosition || 0;
+        this.width = params.width || 0;
         this.title = params.title || 'Sample Item';
         this.location = params.location || 'Sample Location';
     };

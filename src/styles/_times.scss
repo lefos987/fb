@@ -1,0 +1,36 @@
+.times {
+
+    position: relative;
+    margin: -2 * $unit 0 0 0;
+    padding: 0;
+    list-style: none;
+
+    .time-interval {
+
+        position: absolute;
+        left: $unit;
+        right: $unit;
+
+        .time {
+
+            font-size: $unit;
+            text-align: right;
+            color: $tertiary-color;
+
+            &.full-hour {
+
+                font-size: 1.4 * $unit;
+                font-weight: bold;
+                color: $secondary-color;
+            }
+        }
+
+        .ampm {
+
+            margin-left: 0.5 * $unit;
+            font-size: $unit;
+            font-weight: normal;
+            color: $tertiary-color;
+        }
+    }
+}

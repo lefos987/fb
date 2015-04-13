@@ -1,0 +1,28 @@
+.events {
+    height: 100%;
+    background: $bg;
+    position: relative;
+
+
+    .event {
+        position: absolute;
+        background: $secondary-bg;
+        border: 0.1 * $unit solid $tertiary-color;
+        border-left: 0.5 * $unit solid $primary-color;
+
+        .event-info {
+            padding: 0.5 * $unit $unit;
+
+            .event-title {
+                font-size: 1.4 * $unit;
+                color: $primary-color;
+            }
+
+            .event-location {
+                font-size: $unit;
+                color: $secondary-color;
+            }
+        }
+    }
+
+}
