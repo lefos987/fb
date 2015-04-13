@@ -28,10 +28,10 @@
 
         eventContainer.classList.add('event');
         eventContainer.innerHTML = _eventElement;
-        eventContainer.style.top = event.startTime + 'px';
+        eventContainer.style.top = event.start + 'px';
         eventContainer.style.left = event.startPosition + pl + 'px';
         eventContainer.style.right = (w - event.startPosition - event.width) + pr + 'px';
-        eventContainer.style.height = (event.endTime - event.startTime) + 'px';
+        eventContainer.style.height = (event.end - event.start) + 'px';
 
         var eventTitle = eventContainer.getElementsByClassName('event-title')[0],
             eventLocation = eventContainer.getElementsByClassName('event-location')[0];

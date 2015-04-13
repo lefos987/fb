@@ -7,37 +7,44 @@ function layOutEvents (events) {
     events = events || [];
 
     //events = [
-    //    { startTime: 0, endTime: 90 },
-    //    { startTime: 30, endTime: 90 },
-    //    { startTime: 75, endTime: 180 },
-    //    { startTime: 150, endTime: 600 },
-    //    { startTime: 610, endTime: 670 },
-    //    { startTime: 360, endTime: 390 },
-    //    { startTime: 475, endTime: 720 }
+    //    { start: 0, end: 90 },
+    //    { start: 30, end: 90 },
+    //    { start: 75, end: 180 },
+    //    { start: 150, end: 600 },
+    //    { start: 610, end: 670 },
+    //    { start: 360, end: 390 },
+    //    { start: 475, end: 720 }
     //];
 
     //layOutEvents([
-    //    { startTime: 0, endTime: 90 },
-    //    { startTime: 30, endTime: 90 },
-    //    { startTime: 75, endTime: 180 },
-    //    { startTime: 150, endTime: 600 },
-    //    { startTime: 610, endTime: 670 },
-    //    { startTime: 360, endTime: 390 },
-    //    { startTime: 475, endTime: 750 }
+    //    { start: 30, end: 150 },
+    //    { start: 540, end: 600 },
+    //    { start: 560, end: 620 },
+    //    { start: 610, end: 670 }
+    //]);
+
+    //layOutEvents([
+    //    { start: 0, end: 90 },
+    //    { start: 30, end: 90 },
+    //    { start: 75, end: 180 },
+    //    { start: 150, end: 600 },
+    //    { start: 610, end: 670 },
+    //    { start: 360, end: 390 },
+    //    { start: 475, end: 720 }
     //]);
 
     //var events = [
-    //    { startTime: 30, endTime: 150 },
-    //    { startTime: 540, endTime: 600 },
-    //    { startTime: 560, endTime: 620 },
-    //    { startTime: 610, endTime: 670 }
+    //    { start: 30, end: 150 },
+    //    { start: 540, end: 600 },
+    //    { start: 560, end: 620 },
+    //    { start: 610, end: 670 }
     //];
     //var events = [
-    //    { startTime: 0, endTime: 120 },
-    //    { startTime: 450, endTime: 600 },
-    //    { startTime: 390, endTime: 480 },
-    //    { startTime: 360, endTime: 480 },
-    //    { startTime: 540, endTime: 660 }
+    //    { start: 0, end: 120 },
+    //    { start: 450, end: 600 },
+    //    { start: 390, end: 480 },
+    //    { start: 360, end: 480 },
+    //    { start: 540, end: 660 }
     //];
 
     // 1. Draw the time list

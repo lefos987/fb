@@ -6,8 +6,8 @@
 
         params = params || {};
 
-        this.startTime = params.startTime || 0;
-        this.endTime = params.endTime || 0;
+        this.start = params.start || 0;
+        this.end = params.end || 0;
         this.startPosition = params.startPosition || 0;
         this.width = params.width || 0;
         this.title = params.title || 'Sample Item';

@@ -61,8 +61,8 @@
      * @private
      */
     function _haveCollision (eventOne, eventTwo) {
-        return eventOne.endTime > eventTwo.startTime &&
-            eventOne.startTime < eventTwo.endTime;
+        return eventOne.end > eventTwo.start &&
+            eventOne.start < eventTwo.end;
     }
 
     /**
@@ -73,16 +73,16 @@
      */
     function _sortEvents (events) {
         return events.sort(function (a, b) {
-            if (a.startTime < b.startTime) {
+            if (a.start < b.start) {
                 return -1;
             }
-            if (a.startTime > b.startTime) {
+            if (a.start > b.start) {
                 return 1;
             }
-            if (a.endTime < b.endTime) {
+            if (a.end < b.end) {
                 return -1;
             }
-            if (a.endTime > b.endTime) {
+            if (a.end > b.end) {
                 return 1;
             }
             return 0;
@@ -115,7 +115,7 @@
 
             var isPlaced = false;
 
-            if (endOfLastAddedEvent !== null && event.startTime >= endOfLastAddedEvent) {
+            if (endOfLastAddedEvent !== null && event.start >= endOfLastAddedEvent) {
                 _calculateEventDimensions(columns, w);
                 columns = [];
                 endOfLastAddedEvent = null;
@@ -135,8 +135,8 @@
                 columns.push([event]);
             }
 
-            if (endOfLastAddedEvent === null || event.endTime > endOfLastAddedEvent) {
-                endOfLastAddedEvent = event.endTime;
+            if (endOfLastAddedEvent === null || event.end > endOfLastAddedEvent) {
+                endOfLastAddedEvent = event.end;
             }
 
         });
